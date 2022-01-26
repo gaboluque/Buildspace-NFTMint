@@ -2,9 +2,11 @@
   "name": "epic-nfts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npx env-cmd hardhat run scripts/deploy.js",
+    "runOnce": "npx env-cmd hardhat run scripts/run.js",
+    "start": "react-scripts start"
   },
   "keywords": [],
   "author": "",
@@ -15,9 +17,28 @@
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.3",
-    "hardhat": "^2.8.3"
+    "hardhat": "^2.8.3",
+    "react-scripts": "^3.0.1"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.2"
+    "@openzeppelin/contracts": "^4.4.2",
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "env-cmd": "^10.0.1",
+    "ethers": "^5.5.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
