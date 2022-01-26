@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
-import testNFT from './utils/TestNFT.json';
+import testNFT from './utils/AwesomeNFT.json';
 import { ethers } from "ethers";
 
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
+const CONTRACT_ADDRESS = "0x6ec16F7333DbfFA5e6BF94bAF8cfCDE8AB480112";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -61,8 +62,6 @@ const App = () => {
   }
 
   const askContractToMintNft = async () => {
-    const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-
     try {
       const { ethereum } = window;
 
@@ -72,7 +71,7 @@ const App = () => {
         const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, testNFT.abi, signer);
 
         console.log("Going to pop wallet now to pay gas...")
-        let nftTxn = await connectedContract.makeAnEpicNFT({ gasLimit:300000 });
+        let nftTxn = await connectedContract.makeAnEpicNFT();
 
         console.log("Mining...please wait.")
         await nftTxn.wait();

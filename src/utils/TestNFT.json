@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "TestNFT",
-  "sourceName": "contracts/TestNFT.sol",
+  "contractName": "AwesomeNFT",
+  "sourceName": "contracts/AwesomeNFT.sol",
   "abi": [
     {
       "inputs": [],

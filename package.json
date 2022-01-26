@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/main.jsx",
   "scripts": {
-    "deploy": "npx env-cmd hardhat run scripts/deploy.js",
+    "deploy": "npx env-cmd hardhat run scripts/deploy.js --network rinkeby",
     "runOnce": "npx env-cmd hardhat run scripts/run.js",
     "start": "react-scripts start"
   },

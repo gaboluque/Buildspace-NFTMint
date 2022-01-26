@@ -22,6 +22,7 @@ module.exports = {
     rinkeby: {
       url: process.env.ALCHEMY_URL,
       accounts: [process.env.ACCOUNT_ADDRESS],
+      gasPrice: "auto"
     },
   },
 };
