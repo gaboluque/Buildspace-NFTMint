@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 import { Base64 } from "./libraries/Base64.sol";
 
-contract AwesomeNFT is ERC721URIStorage {
+contract MyEpicNFT is ERC721URIStorage {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
@@ -18,7 +18,9 @@ contract AwesomeNFT is ERC721URIStorage {
   string[] secondWords = ["Sasuke", "Goku", "Naruto", "Eren", "Meliodas", "Tanjiro"];
   string[] thirdWords = ["Barfing", "MakingItRain", "Flirting", "Dancing", "Training", "Eating"];
 
-  constructor() ERC721 ("AwesomeNFT", "AWESOMENFT") {
+  event NewEpicNFTMinted(address sender, uint256 tokenId);
+
+  constructor() ERC721 ("MyEpicNFT", "AWESOMENFT") {
     console.log("This is my NFT contract. Woah!");
   }
 
@@ -87,5 +89,7 @@ contract AwesomeNFT is ERC721URIStorage {
   
     _tokenIds.increment();
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+
+    emit NewEpicNFTMinted(msg.sender, newItemId);
   }
 }
