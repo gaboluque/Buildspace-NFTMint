@@ -1,13 +1,7 @@
-## Running React on Repl.it
+## Buildspace NFT Minting app
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+This is a simple React + Ethereum app where users can connect their wallets, mint a rondom NFT and see their collections!
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+- Following [https://app.buildspace.so/](https://app.buildspace.so) ETH NFT Mint tutorial
 
-Using the two in conjunction is one of the fastest ways to build a web app.
-
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the `.replit` file.
+![image](https://user-images.githubusercontent.com/12043752/158038460-679c8635-c36b-4c14-82f7-8659731962c8.png)
